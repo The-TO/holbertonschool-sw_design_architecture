@@ -1,0 +1,28 @@
+classDiagram
+    direction TB
+    Library *-- Book
+    Library *-- User
+    Loan "n" --* "1" User
+    Book "1"*-- "n"Loan
+    
+      class Library {
+        +add_book()
+        +create_loan()
+        +register_user()
+      }
+      class Book {
+        +str title 
+        +str author
+        +bool state
+        +mark_as_unavailable()
+        +mark_as_available()
+      }
+      class User {
+        -str name
+        -str email
+      }
+      class Loan {
+        -str start_date
+        -str end_date
+        +close_loan()
+      }
