@@ -49,6 +49,5 @@ def main() -> None:
     print(factory.create("scooter").mode())
 
 
-
 if __name__ == "__main__":
     main()
